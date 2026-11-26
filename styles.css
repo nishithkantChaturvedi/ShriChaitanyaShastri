@@ -21,3 +21,47 @@ a:focus-visible,button:focus-visible{outline:3px solid #d58836;outline-offset:4p
 @media(max-width:1000px){.site-header{height:84px}.brand strong{font-size:13px}.nav-links{gap:15px}.nav-cta{padding:10px}.hero{gap:30px}.hero-art{height:440px}}
 @media(max-width:760px){.site-header{height:72px}.brand-mark{width:38px;height:38px;font-size:22px}.brand strong{font-size:12px}.nav-links{top:72px}.hero{padding-top:48px;padding-bottom:42px;gap:36px}.hero h1{font-size:clamp(43px,10vw,54px)}.hero-copy:before{right:5px}.hero-art{height:390px;width:calc(100% - 16px);margin:auto}.hero-art:before{inset:12px}.art-top{top:83px}.art-frame:before{top:18px}.art-frame:after{top:-10px}.flame-glow{top:150px}.diya-flame{top:165px}.diya-wick{top:221px}.diya-bowl{top:234px}.diya-base{top:319px}.art-bottom{bottom:30px}.art-caption{right:-12px;bottom:18px}.service-band{padding:57px 0}.section-heading h2{font-size:26px}.service-card{min-height:220px;padding:18px 15px}.wisdom{width:calc(100% - 40px);margin-top:28px;margin-bottom:28px;padding:22px 18px}.wisdom .button-outline{margin-left:66px}.guide-preview{padding:58px 0}.page-hero{padding:57px 0 44px}.page-hero:after{font-size:78px;right:5px;top:35px}.page-hero h1{font-size:clamp(39px,9vw,46px)}.footer-contact{margin-left:0}}
 @media(max-width:390px){.brand strong{font-size:10px}.hero h1{font-size:42px}.hero-actions{gap:14px;flex-wrap:wrap}.art-caption{padding:9px 12px}.service-card{min-height:235px}}
+
+/* Portrait photography */
+.portrait-frame {
+  width: 100%;
+  max-width: 360px;
+  justify-self: center;
+  margin: 0;
+  padding: 8px;
+  min-width: 0;
+  background: #fff7eb;
+  border: 1px solid #e7c79b;
+  border-radius: 12px;
+  box-shadow: 0 14px 32px #7a3c231c;
+}
+
+.portrait-crop {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 10 / 11;
+  border-radius: 6px;
+  background: var(--paper2);
+}
+
+/* Show the center 300 pixels of the 417 pixel photo, starting at the top. */
+.portrait-crop img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: block;
+  width: 139%;
+  max-width: none;
+  height: auto;
+  transform: translateX(-50%);
+}
+
+.about-portrait {
+  max-width: 320px;
+}
+
+@media (max-width: 760px) {
+  .portrait-frame {
+    max-width: 310px;
+  }
+}
